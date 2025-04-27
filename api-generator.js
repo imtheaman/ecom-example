@@ -2,7 +2,7 @@ const path = require('path');
 const { Project } = require('ts-morph');
 
 const PROJECT_DIR = process.argv[2] || '.';
-const SERVICE_OUTPUT_DIR = path.join(PROJECT_DIR, 'src/infrastructure/datamanagers');
+const SERVICE_OUTPUT_DIR = path.join(PROJECT_DIR, 'src/infrastructure/datamanager');
 
 const project = new Project({
 	tsConfigFilePath: path.join(PROJECT_DIR, 'tsconfig.json'),

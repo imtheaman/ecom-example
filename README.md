@@ -13,9 +13,11 @@
 
 The application follows Clean Architecture principles, with the following layers:
 
-- **Domain Layer**: Contains business logic, entities, and interfaces
-- **Data Layer**: Implements repositories, handles API calls and local storage
-- **Presentation Layer**: Contains UI components, screens, and state management
+- **Domain Layer**: Contains business logic, repository interfaces, entities, and dtos
+- **Data Layer**: Contains repository implementations
+- **DI Layer**: Contains AppModule dependecy injector
+- **Infrastructure Layer**: Contains data managers, hooks wrappers for performant netowrk calls, storage service, store and apiClient, queryClient, GoogleClient
+- **Presentation Layer**: Contains Atomic Ui components: atoms, molecules, organisms, templates, screens and navigation
 
 ### Technologies and Libraries
 
@@ -28,6 +30,8 @@ The application follows Clean Architecture principles, with the following layers
 - **Axios**: For API requests
 - **Firebase Auth**: For OAuth authentication and Google Sign-in
 - **Jest**: For testing
+- **FlashList**: For performant lists
+- **React-native-fast-image**: For performant images
 
 ### Design Patterns
 
@@ -42,6 +46,8 @@ The application follows Clean Architecture principles, with the following layers
 - Node.js >= 18
 - npm or yarn
 - React Native development environment setup
+- `.env` variables
+- `google-services.json` and `GoogleService-Info.plist` files(attached to the mail)
 
 ### Installation
 
@@ -50,11 +56,13 @@ The application follows Clean Architecture principles, with the following layers
 ```bash
 yarn install --frozen-lockfile
 ```
-1. Start the Metro server
+3. place `google-services.json` and `GoogleService-Info.plist` files in `android/app/google-services.json` and `ios/GoogleService-Info.plist`, so firebase initialization can happen properly
+
+4. Start the Metro server
 ```bash
 yarn start
 ```
-2. Run on iOS or Android
+5. Run on iOS or Android
    ```bash
 npm run ios #For iOS
 npm run android #For Android
