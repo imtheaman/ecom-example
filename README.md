@@ -56,17 +56,17 @@ The application follows Clean Architecture principles, with the following layers
 ```bash
 yarn install --frozen-lockfile
 ```
-3. place `google-services.json` and `GoogleService-Info.plist` files in `android/app/google-services.json` and `ios/GoogleService-Info.plist`, so firebase initialization can happen properly
+3. create `.env` file in project root and add environment variables and place `google-services.json` and `GoogleService-Info.plist` files in `android/app/google-services.json` and `ios/GoogleService-Info.plist`, so firebase initialization can happen properly
 
 4. Start the Metro server
 ```bash
 yarn start
 ```
 5. Run on iOS or Android
-   ```bash
+```bash
 npm run ios #For iOS
 npm run android #For Android
-   ```
+```
 
 ## Testing
 
