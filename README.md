@@ -47,7 +47,6 @@ The application follows Clean Architecture principles, with the following layers
 - npm or yarn
 - React Native development environment setup
 - `.env` variables
-- `google-services.json` and `GoogleService-Info.plist` files(attached to the mail)
 
 ### Installation
 
@@ -56,7 +55,7 @@ The application follows Clean Architecture principles, with the following layers
 ```bash
 yarn install --frozen-lockfile
 ```
-3. create `.env` file in project root and add environment variables and place `google-services.json` and `GoogleService-Info.plist` files in `android/app/google-services.json` and `ios/GoogleService-Info.plist`, so firebase initialization can happen properly
+3. create `.env` file in project root and add environment variables, so firebase initialization can happen properly
 
 4. Start the Metro server
 ```bash
@@ -64,8 +63,8 @@ yarn start
 ```
 5. Run on iOS or Android
 ```bash
-npm run ios #For iOS
-npm run android #For Android
+yarn ios #For iOS
+yarn android #For Android
 ```
 
 ## Testing
@@ -73,7 +72,7 @@ npm run android #For Android
 Run the test suite:
 
 ```bash
-npm test
+yarn test
 ```
 
 ## API Integration
